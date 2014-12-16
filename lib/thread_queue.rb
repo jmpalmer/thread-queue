@@ -89,7 +89,7 @@ class ThreadQueue
       #semaphore used force array modifications to be thread safe
       @semaphore.synchronize do
         @running_count = @running_count + 1
-        @thread_group.add(create_thread(@jobs.delete_at(0)))
+        @thread_group.add(create_thread(@jobs.shift))
       end
 
     end
