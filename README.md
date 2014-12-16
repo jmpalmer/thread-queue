@@ -6,8 +6,9 @@ The purpose of this software is to provide an easy to use worker thread queue th
 
 ##Usage
 To use this in your code, first create a thread queue object like so:
+    require 'thread_queue'
 
-    queue = WorkQueue.new(count)
+    queue = ThreadQueue.new(count)
 
 Here the count is the number of threads desired in the pool.
 
