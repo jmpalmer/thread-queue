@@ -58,8 +58,7 @@ class ThreadQueue
 
   # actually creates execution thread
   def create_thread (block)
-
-    thread = Thread.new {
+    Thread.new {
 
       #execute the desired code
       block.yield
