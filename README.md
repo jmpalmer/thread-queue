@@ -2,7 +2,7 @@
 ___
 
 ##Purpose
-The purpose of this software is to provide an easy to use worker thread queue that enables easy parallelization of code block execution. This queue uses Ruby threads and is Operating System agnostic. 
+The purpose of this software is to provide an easy to use worker thread queue that enables easy parallelization of code block execution. This queue uses Ruby threads and is Operating System agnostic.
 
 ##Usage
 To use this in your code, first create a thread queue object like so:
@@ -17,17 +17,15 @@ Next, add jobs to the queue by calling `add_job` with a block:
     queue.add_job do
       # do work
     end
-    
+
 Lastly, tell the queue to wait till all the jobs are completed:
 
     queue.wait
-    
-    
-And thats it! The queue will begin working as soon as the first job is added and will continue working till the last job is completed. At which point the call to wait will return and allow the rest of your code to execute. 
-
-Please note, calling `wait` is blocking. Also, if no call to `wait` is made and your code completes execution, execution of the worker threads will be prematurely terminated. 
 
 
+And thats it! The queue will begin working as soon as the first job is added and will continue working till the last job is completed. At which point the call to wait will return and allow the rest of your code to execute.
+
+Please note, calling `wait` is blocking. Also, if no call to `wait` is made and your code completes execution, execution of the worker threads will be prematurely terminated.
 
 
 ### License
